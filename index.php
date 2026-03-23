@@ -141,17 +141,11 @@
             color: var(--accent-color);
         }
 
-        #theme-toggle {
-            cursor: pointer;
-            font-size: 1.2rem;
-            margin-left: 1rem;
-            color: var(--accent-color);
-        }
-
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--accent-color);
         }
 
         /* --- Sections common --- */
@@ -198,8 +192,9 @@
         }
 
         .hero-image img {
-            width: 350px;
-            height: 350px;
+            width: 100%;
+            max-width: 350px;
+            aspect-ratio: 1/1;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid var(--accent-color);
@@ -542,12 +537,23 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            .hero-image {
+                order: -1;
+            }
             .hero-name {
                 font-size: 3rem;
             }
+            .btn-group {
+                justify-content: center;
+            }
             #about .about-wrapper, .contact-wrapper {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 3rem;
             }
             .flow-arrow {
                 transform: rotate(90deg);
@@ -559,30 +565,60 @@
         }
 
         @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1.5rem;
+            }
             .nav-links {
-                display: none;
-                position: absolute;
+                position: fixed;
                 top: 80px;
-                right: 0;
+                left: -100%;
                 width: 100%;
-                background: var(--secondary-bg);
+                height: calc(100vh - 80px);
+                background: var(--bg-color);
                 flex-direction: column;
-                padding: 1.5rem;
-                text-align: center;
-                gap: 1.5rem;
-                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+                justify-content: center;
+                align-items: center;
+                transition: 0.4s ease;
+                z-index: 999;
+                box-shadow: none;
             }
 
             .nav-links.active {
-                display: flex;
+                left: 0;
             }
 
             .mobile-menu-btn {
                 display: block;
             }
 
-            #theme-toggle {
-                margin: 0;
+            .experience-timeline {
+                padding-left: 1.5rem;
+            }
+            
+            .education-summary {
+                display: block;
+                text-align: center;
+            }
+
+            .hero-name {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            .hero-image img {
+                max-width: 250px;
             }
         }
     </style>
