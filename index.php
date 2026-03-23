@@ -165,11 +165,31 @@
         }
 
         /* --- Hero Section --- */
-        #home {
-            height: 100vh;
-            display: flex;
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
             align-items: center;
-            background: linear-gradient(rgba(37, 99, 235, 0.05), rgba(37, 99, 235, 0.05));
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--accent-color);
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
         }
 
         .hero-content {
@@ -573,7 +593,7 @@
 
     <!-- Hero Section -->
     <section id="home">
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
                 <span class="hero-title">Embedded Systems & IoT Engineer</span>
                 <h1 class="hero-name">Research & Development Engineer</h1>
@@ -582,6 +602,9 @@
                     <a href="#projects" class="btn btn-primary">View Projects</a>
                     <a href="download_cv.php" class="btn btn-outline">Download CV</a>
                 </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile_photo.png" alt="Repon Sheikh Profile Photo">
             </div>
         </div>
     </section>
