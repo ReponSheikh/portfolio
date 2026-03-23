@@ -513,11 +513,13 @@
         .status-prototype { background: #fef3c7; color: #92400e; }
         .status-ongoing   { background: #dbeafe; color: #1e40af; }
         .status-concept   { background: #f1f5f9; color: #475569; }
+        .status-deployed  { background: #e0f2fe; color: #0369a1; }
 
         body.dark-mode .status-completed { background: #064e3b; color: #6ee7b7; }
         body.dark-mode .status-prototype { background: #78350f; color: #fcd34d; }
         body.dark-mode .status-ongoing   { background: #1e3a8a; color: #93c5fd; }
         body.dark-mode .status-concept   { background: #334155; color: #cbd5e1; }
+        body.dark-mode .status-deployed  { background: #0c4a6e; color: #7dd3fc; }
 
         .doc-link {
             color: var(--accent-color);
@@ -768,6 +770,69 @@
                     <tbody>
                         <tr>
                             <td>01</td>
+                            <td style="font-weight: 600;">Modbus TCP/IP SCADA RTU</td>
+                            <td>Industrial Automation</td>
+                            <td>Ethernet-based SCADA RTU prototype</td>
+                            <td>Feb 2026</td>
+                            <td><a href="https://www.researchtape.com/2026/02/gridsync-beta-20-developing-modbus.html" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">researchtape.com/2026/02/gridsy... <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-prototype">Prototype</span></td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td style="font-weight: 600;">GridSync RTU System</td>
+                            <td>Power Systems / SCADA</td>
+                            <td>Distributed power monitoring RTU</td>
+                            <td>2016 – Pres.</td>
+                            <td><span style="font-size: 0.85rem; opacity: 0.7; font-weight: 600;">GridSync V1 / R&D</span></td>
+                            <td><span class="status-badge status-prototype">Prototype</span></td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td style="font-weight: 600;">ESP8266 Multi-tasking</td>
+                            <td>Embedded Systems</td>
+                            <td>Multi-tasking on ESP8266 (FreeRTOS)</td>
+                            <td>Mar 2026</td>
+                            <td><a href="https://lnkd.in/gzzyu_Ve" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">lnkd.in/gzzyu_Ve <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td style="font-weight: 600;">EEPROM Power Integrity Fix</td>
+                            <td>R&D / Debugging</td>
+                            <td>Hardware-level EEPROM stability fix</td>
+                            <td>Mar 2026</td>
+                            <td><a href="https://lnkd.in/gbEK8iZ8" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">lnkd.in/gbEK8iZ8 <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td style="font-weight: 600;">MCU Heartbeat & Reliability</td>
+                            <td>Embedded Systems</td>
+                            <td>MCU health monitoring techniques</td>
+                            <td>Mar 2026</td>
+                            <td><a href="https://lnkd.in/gDWzRig2" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">lnkd.in/gDWzRig2 <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                            <td style="font-weight: 600;">RFID IoT Web Interface</td>
+                            <td>IoT / Security</td>
+                            <td>Web-based RFID access & monitoring</td>
+                            <td>Feb 2026</td>
+                            <td><a href="https://lnkd.in/gwiUYs3P" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">lnkd.in/gwiUYs3P <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>07</td>
+                            <td style="font-weight: 600;">Python-ESP8266 Serial GUI</td>
+                            <td>Software / IoT</td>
+                            <td>Real-time RS232 desktop interface</td>
+                            <td>Feb 2026</td>
+                            <td><a href="https://lnkd.in/gPxT-un7" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">lnkd.in/gPxT-un7 <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>08</td>
                             <td style="font-weight: 600;">ESP8266 Internet Radio</td>
                             <td>Embedded Systems</td>
                             <td>Global audio streaming system</td>
@@ -776,7 +841,7 @@
                             <td><span class="status-badge status-completed">Completed</span></td>
                         </tr>
                         <tr>
-                            <td>02</td>
+                            <td>09</td>
                             <td style="font-weight: 600;">Instant Power Supply</td>
                             <td>Electrical</td>
                             <td>50Hz duty cycle control</td>
@@ -785,7 +850,7 @@
                             <td><span class="status-badge status-prototype">Prototype</span></td>
                         </tr>
                         <tr>
-                            <td>03</td>
+                            <td>10</td>
                             <td style="font-weight: 600;">IoT Control System</td>
                             <td>Embedded</td>
                             <td>WiFi-based control system</td>
@@ -794,13 +859,76 @@
                             <td><span class="status-badge status-ongoing">Ongoing</span></td>
                         </tr>
                         <tr>
-                            <td>04</td>
+                            <td>11</td>
                             <td style="font-weight: 600;">Smart IR Sensor Idea</td>
                             <td>Concept</td>
                             <td>Contactless sensing idea</td>
                             <td>Oct 2025</td>
                             <td><a href="https://www.researchtape.com/2025/10/advanced-battery-guard-protection.html" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">researchtape.com/2025/10/advan... <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
                             <td><span class="status-badge status-concept">Concept</span></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td style="font-weight: 600;">PWM Heater Controller</td>
+                            <td>Power Electronics</td>
+                            <td>Energy-efficient IGBT switching</td>
+                            <td>Sep 2023</td>
+                            <td><span style="font-size: 0.85rem; opacity: 0.7; font-weight: 600;">Power Stage Design</span></td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td style="font-weight: 600;">Automated Test System</td>
+                            <td>Test Engineering</td>
+                            <td>RS232-based test automation</td>
+                            <td>2015 – 2017</td>
+                            <td><span style="font-size: 0.85rem; opacity: 0.7; font-weight: 600;">Industrial Product</span></td>
+                            <td><span class="status-badge status-deployed">Deployed</span></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td style="font-weight: 600;">Solar Prepaid Code Lock</td>
+                            <td>Embedded Security</td>
+                            <td>IR remote credit authorization</td>
+                            <td>2014 – 2016</td>
+                            <td><span style="font-size: 0.85rem; opacity: 0.7; font-weight: 600;">Solaric (Deployed)</span></td>
+                            <td><span class="status-badge status-deployed">Deployed</span></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td style="font-weight: 600;">DC Energy Meter System</td>
+                            <td>Measurement</td>
+                            <td>Solar/DC power monitoring</td>
+                            <td>2014 – 2016</td>
+                            <td><span style="font-size: 0.85rem; opacity: 0.7; font-weight: 600;">Logic & Conditioning</span></td>
+                            <td><span class="status-badge status-deployed">Deployed</span></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td style="font-weight: 600;">DC Supply Protection</td>
+                            <td>Power Integrity</td>
+                            <td>Fault detection & isolation</td>
+                            <td>2014 – 2015</td>
+                            <td><span style="font-size: 0.85rem; opacity: 0.7; font-weight: 600;">Reliability Design</span></td>
+                            <td><span class="status-badge status-deployed">Deployed</span></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td style="font-weight: 600;">Soft-Start DC-AC Converter</td>
+                            <td>Power Electronics</td>
+                            <td>Modified sine wave 50Hz</td>
+                            <td>2014</td>
+                            <td><span style="font-size: 0.85rem; opacity: 0.7; font-weight: 600;">ATtiny Embedded</span></td>
+                            <td><span class="status-badge status-deployed">Deployed</span></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td style="font-weight: 600;">High Solar Controller</td>
+                            <td>Industrial Power</td>
+                            <td>48V, 120A PIC design</td>
+                            <td>2012 – 2013</td>
+                            <td><span style="font-size: 0.85rem; opacity: 0.7; font-weight: 600;">TechnoEx (Product)</span></td>
+                            <td><span class="status-badge status-deployed">Deployed</span></td>
                         </tr>
                     </tbody>
                 </table>
