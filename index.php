@@ -219,9 +219,10 @@
         }
 
         .hero-name {
-            font-size: 4rem;
-            line-height: 1.1;
+            font-size: 3.5rem;
+            line-height: 1.2;
             margin-bottom: 1.5rem;
+            white-space: nowrap;
         }
 
         .hero-tagline {
@@ -451,6 +452,85 @@
             margin-bottom: 0.5rem;
         }
 
+        /* --- Work Index Section --- */
+        /* --- Applied Engineering Table --- */
+        .research-table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            background: var(--bg-color);
+        }
+
+        .research-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: center;
+            min-width: 900px;
+        }
+
+        .research-table th, .research-table td {
+            padding: 1.2rem 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        body.dark-mode .research-table th, body.dark-mode .research-table td {
+            border-bottom-color: rgba(255,255,255,0.05);
+        }
+
+        .research-table th {
+            background: var(--secondary-bg);
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .research-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .research-table tr:hover {
+            background: rgba(37, 99, 235, 0.03);
+        }
+
+        body.dark-mode .research-table tr:hover {
+            background: rgba(56, 189, 248, 0.03);
+        }
+
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .status-completed { background: #dcfce7; color: #166534; }
+        .status-prototype { background: #fef3c7; color: #92400e; }
+        .status-ongoing   { background: #dbeafe; color: #1e40af; }
+        .status-concept   { background: #f1f5f9; color: #475569; }
+
+        body.dark-mode .status-completed { background: #064e3b; color: #6ee7b7; }
+        body.dark-mode .status-prototype { background: #78350f; color: #fcd34d; }
+        body.dark-mode .status-ongoing   { background: #1e3a8a; color: #93c5fd; }
+        body.dark-mode .status-concept   { background: #334155; color: #cbd5e1; }
+
+        .doc-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .doc-link:hover {
+            text-decoration: underline;
+        }
         /* --- Contact Section --- */
         .contact-wrapper {
             display: grid;
@@ -546,7 +626,8 @@
                 order: -1;
             }
             .hero-name {
-                font-size: 3rem;
+                font-size: 2.2rem;
+                white-space: normal;
             }
             .btn-group {
                 justify-content: center;
@@ -626,22 +707,23 @@
 <body>
 
     <header>
-        <div class="container nav-container">
-            <nav>
-                <a href="#home" class="logo">Repon Sheikh</a>
-                
+        <div class="container nav-container" style="display: flex; justify-content: space-between; align-items: center; height: 80px;">
+            <a href="#home" class="logo">Repon Sheikh</a>
+            
+            <nav style="display: flex; align-items: center; gap: 1rem;">
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-item active" data-target="home">Home</a></li>
                     <li><a href="#about" class="nav-item" data-target="about">About</a></li>
                     <li><a href="#experience" class="nav-item" data-target="experience">Experience</a></li>
                     <li><a href="#education" class="nav-item" data-target="education">Education</a></li>
                     <li><a href="#projects" class="nav-item" data-target="projects">Projects</a></li>
-                    <li><a href="#integration" class="nav-item" data-target="integration">Integration</a></li>
+                    <li><a href="#work-index" class="nav-item" data-target="work-index">Research & Innovation</a></li>
                     <li><a href="#contact" class="nav-item" data-target="contact">Contact</a></li>
-                    <li><i class="fas fa-moon" id="theme-toggle" title="Toggle Dark/Light Mode"></i></li>
                 </ul>
 
-                <div class="mobile-menu-btn">
+                <i class="fas fa-moon" id="theme-toggle" title="Toggle Dark/Light Mode" style="cursor: pointer; font-size: 1.2rem; color: var(--accent-color);"></i>
+
+                <div class="mobile-menu-btn" style="color: var(--accent-color); font-size: 1.5rem; cursor: pointer;">
                     <i class="fas fa-bars"></i>
                 </div>
             </nav>
@@ -657,13 +739,71 @@
                 <div class="contact-highlights" style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 1.5rem; opacity: 0.9; font-size: 0.9rem;">
                     <span><i class="fab fa-linkedin" style="color: var(--accent-color); margin-right: 0.5rem;"></i> <a href="https://linkedin.com/in/reponsheikh" target="_blank" style="color: inherit; text-decoration: none;">linkedin.com/in/reponsheikh</a></span>
                 </div>
-                <div class="btn-group">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="download_cv.php" class="btn btn-outline">Download CV</a>
-                </div>
             </div>
             <div class="hero-image">
                 <img src="profile_photo.png" alt="Md. Repon Sheikh Profile Photo">
+            </div>
+        </div>
+    </section>
+
+    <section id="work-index" style="background: var(--bg-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Applied Engineering, Research & Innovation</h2>
+            </div>
+            
+            <div class="research-table-container">
+                <table class="research-table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Project or Research Title</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Timeline</th>
+                            <th style="color: var(--accent-color);">Published</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td style="font-weight: 600;">ESP8266 Internet Radio</td>
+                            <td>Embedded Systems</td>
+                            <td>Global audio streaming system</td>
+                            <td>Jan 2026</td>
+                            <td><a href="https://www.researchtape.com/2026/01/esp8266-internet-radio-loscost-global.html" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">researchtape.com/2026/01/esp8... <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td style="font-weight: 600;">Instant Power Supply</td>
+                            <td>Electrical</td>
+                            <td>50Hz duty cycle control</td>
+                            <td>Dec 2025</td>
+                            <td><a href="https://www.researchtape.com/2025/12/instant-power-supply-pic16f76.html" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">researchtape.com/2025/12/insta... <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-prototype">Prototype</span></td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td style="font-weight: 600;">IoT Control System</td>
+                            <td>Embedded</td>
+                            <td>WiFi-based control system</td>
+                            <td>Nov 2025</td>
+                            <td><a href="https://www.researchtape.com/2025/11/solar-smps-code-lock-system.html" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">researchtape.com/2025/11/solar... <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-ongoing">Ongoing</span></td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td style="font-weight: 600;">Smart IR Sensor Idea</td>
+                            <td>Concept</td>
+                            <td>Contactless sensing idea</td>
+                            <td>Oct 2025</td>
+                            <td><a href="https://www.researchtape.com/2025/10/advanced-battery-guard-protection.html" target="_blank" style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-decoration: none; border-bottom: 1px dashed var(--accent-color);">researchtape.com/2025/10/advan... <i class="fas fa-external-link-alt" style="font-size: 0.7em;"></i></a></td>
+                            <td><span class="status-badge status-concept">Concept</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -706,6 +846,10 @@
                         </ul>
                     </div>
                 </div>
+                <div class="btn-group" style="margin-top: 2rem; justify-content: flex-start;">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="download_cv.php" class="btn btn-outline">Download CV</a>
+                </div>
             </div>
         </div>
     </section>
@@ -713,11 +857,15 @@
     <!-- Experience Section -->
     <section id="experience">
         <div class="container">
-            <div class="experience-summary" style="margin-bottom: 3rem; background: var(--bg-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--accent-color); display: inline-block;">
-                <p style="font-weight: 700; color: var(--accent-color); font-size: 1.1rem;">
-                    <i class="fas fa-briefcase"></i> 16 Years of Technical & R&D Experience
-                </p>
-                <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">A legacy of applied research, system-level design, and engineering reliability.</p>
+            <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
+                <h2 style="display: block; margin-left: 0;">Career Background</h2>
+                <style>#experience .section-title h2::after { left: 0; transform: none; }</style>
+                <div style="margin-top: 1.5rem;">
+                    <p style="font-weight: 700; color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">
+                        <i class="fas fa-briefcase"></i> 16 Years of Technical & R&D Experience
+                    </p>
+                    <p style="font-size: 1rem; opacity: 0.8;">A legacy of applied research, system-level design, and engineering reliability.</p>
+                </div>
             </div>
             <div class="experience-timeline" style="position: relative; padding-left: 2rem; border-left: 2px solid var(--accent-color);">
                 
@@ -784,11 +932,15 @@
     </section>
     <section id="education" style="background: var(--secondary-bg);">
         <div class="container">
-            <div class="education-summary" style="margin-bottom: 3rem; background: var(--bg-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--accent-color); display: inline-block;">
-                <p style="font-weight: 700; color: var(--accent-color); font-size: 1.1rem;">
-                    <i class="fas fa-graduation-cap"></i> 10 Years of Technical Education in Electrical Engineering
-                </p>
-                <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">4 Years B.Sc. + 4 Years Diploma + 2 Years Vocational Trade Course</p>
+            <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
+                <h2 style="display: block; margin-left: 0;">Educational background</h2>
+                <style>#education .section-title h2::after { left: 0; transform: none; }</style>
+                <div style="margin-top: 1.5rem;">
+                    <p style="font-weight: 700; color: var(--accent-color); font-size: 1.1rem; margin-bottom: 0.5rem;">
+                        <i class="fas fa-graduation-cap"></i> 10 Years of Technical Education in Electrical Engineering
+                    </p>
+                    <p style="font-size: 1rem; opacity: 0.8;">4 Years B.Sc. + 4 Years Diploma + 2 Years Vocational Trade Course</p>
+                </div>
             </div>
             <div class="education-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <div class="education-card" style="background: var(--bg-color); padding: 2rem; border-radius: 12px; box-shadow: var(--card-shadow); border-left: 5px solid var(--accent-color);">
@@ -813,8 +965,9 @@
     </section>
     <section id="projects">
         <div class="container">
-            <div class="section-title">
-                <h2>Featured Projects</h2>
+            <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
+                <h2 style="display: block; margin-left: 0;"><i class="fas fa-video" style="font-size: 0.8em; margin-right: 10px;"></i>Full Presentation (Video Showcase)</h2>
+                <style>#projects .section-title h2::after { left: 0; transform: none; }</style>
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
@@ -864,8 +1017,10 @@
     <!-- Integration Section -->
     <section id="integration">
         <div class="container">
-            <div class="section-title">
-                <h2>Hardware-Software Integration</h2>
+            <div class="section-title" style="text-align: left; margin-bottom: 2rem;">
+                <h2 style="display: block; margin-left: 0;">Technical Hub & Special Skills</h2>
+                <h3 style="color: var(--accent-color); font-size: 1.5rem; margin-top: 1rem;">Hardware-Software Integration</h3>
+                <style>#integration .section-title h2::after { left: 0; transform: none; }</style>
             </div>
             
             <div class="flow-diagram">
@@ -896,26 +1051,80 @@
         </div>
     </section>
 
+    </section>
+
     <!-- AIDI Section -->
     <section id="aidi">
         <div class="container">
-            <div class="section-title">
-                <h2>AIDI – AI-Driven Data Intelligence</h2>
+            <div class="section-title" style="text-align: left; margin-bottom: 3rem;">
+                <h2 style="display: block; margin-left: 0;">Research Innovation & Future Concepts</h2>
+                <style>#aidi .section-title h2::after { left: 0; transform: none; }</style>
             </div>
-            <div class="aidi-content">
-                <p>AIDI is my vision for the next generation of industrial intelligence. By integrating machine learning models directly with hardware sensors, we can move from reactive monitoring to predictive intelligence.</p>
-                <div class="aidi-goals">
-                    <div class="goal-item">
-                        <h4>Real-time Analytics</h4>
-                        <p>Immediate insights from edge data.</p>
+
+            <!-- Innovation Concept 01: AIDI -->
+            <div class="innovation-concept" style="margin-bottom: 5rem;">
+                <div class="concept-header" style="text-align: left; margin-bottom: 2rem;">
+                    <h3 style="color: var(--accent-color); font-size: 1.6rem; margin-bottom: 0.5rem;">Concept 01: AIDI – AI-Driven Data Intelligence</h3>
+                    <p style="font-size: 1.1rem; opacity: 0.8; max-width: 900px; line-height: 1.6;">
+                        AIDI is my vision for the next generation of industrial intelligence. By integrating machine learning models directly with hardware sensors, we can move from reactive monitoring to predictive intelligence.
+                    </p>
+                </div>
+                
+                <div class="concept-timeline" style="position: relative; padding-left: 2rem; border-left: 2px solid var(--accent-color); text-align: left;">
+                    <div class="concept-item" style="margin-bottom: 2.5rem; position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-chart-line" style="margin-right: 10px;"></i>Real-time Analytics</h4>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Immediate insights from edge data.</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8;">Processing data at the source to enable instantaneous decision-making and reduced latency.</p>
                     </div>
-                    <div class="goal-item">
-                        <h4>Predictive Maintenance</h4>
-                        <p>Detect failures before they happen.</p>
+                    <div class="concept-item" style="margin-bottom: 2.5rem; position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-tools" style="margin-right: 10px;"></i>Predictive Maintenance</h4>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Detect failures before they happen.</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8;">Anomalous behavior detection through advanced sensor fusion and machine learning models.</p>
                     </div>
-                    <div class="goal-item">
-                        <h4>Smart Automation</h4>
-                        <p>Context-aware system controls.</p>
+                    <div class="concept-item" style="margin-bottom: 2.5rem; position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-cogs" style="margin-right: 10px;"></i>Smart Automation</h4>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Context-aware system controls.</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8;">Next-gen control systems that adapt to environmental changes and operational requirements.</p>
+                    </div>
+                    <div class="concept-item" style="position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-network-wired" style="margin-right: 10px;"></i>Edge-to-Cloud Intelligence Orchestration</h4>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Distributed computing for high-reliability systems.</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8;">Balancing critical tasks between local edge hardware and scalable cloud infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Innovation Concept 02: Transformer Profiler -->
+            <div class="innovation-concept" style="margin-bottom: 3rem;">
+                <div class="concept-header" style="text-align: left; margin-bottom: 2rem;">
+                    <h3 style="color: var(--accent-color); font-size: 1.6rem; margin-bottom: 1rem;">Concept 02: Transformer Temperature Current Co-Relation Profiler</h3>
+                    <p style="font-size: 1.1rem; opacity: 0.8; max-width: 900px; line-height: 1.6;">
+                        A specialized profiling system designed for high-voltage grid assets, optimizing operational life-cycles through advanced thermal-current correlation and stress modeling.
+                    </p>
+                </div>
+                
+                <div class="concept-timeline" style="position: relative; padding-left: 2rem; border-left: 2px solid var(--accent-color); text-align: left;">
+                    <div class="concept-item" style="margin-bottom: 2.5rem; position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-thermometer-half" style="margin-right: 10px;"></i>Thermal Gradient Analysis</h4>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Monitoring internal winding stress.</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8;">Analyzing temperature distribution within transformer windings during peak current flows.</p>
+                    </div>
+                    <div class="concept-item" style="margin-bottom: 2.5rem; position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-bolt" style="margin-right: 10px;"></i>Load-Thermal Correlation</h4>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Mapping current spikes to thermal aging.</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8;">Predicting insulation degradation by correlating historic current peaks with thermal surges.</p>
+                    </div>
+                    <div class="concept-item" style="position: relative;">
+                        <div style="position: absolute; left: -2.6rem; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%;"></div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;"><i class="fas fa-microchip" style="margin-right: 10px;"></i>Predictive Asset Management</h4>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Optimizing grid reliability.</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8;">Data-driven maintenance scheduling based on calculated thermal stress and remaining life-cycle estimation.</p>
                     </div>
                 </div>
             </div>
