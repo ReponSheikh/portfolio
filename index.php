@@ -580,7 +580,7 @@
                 <p class="hero-tagline">I build intelligent systems where hardware meets software, specializing in end-to-end integration for modern automation and IoT solutions.</p>
                 <div class="btn-group">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="Repon_Sheikh_CV.pdf" class="btn btn-outline" download>Download CV</a>
+                    <a href="download_cv.php" class="btn btn-outline">Download CV</a>
                 </div>
             </div>
         </div>
