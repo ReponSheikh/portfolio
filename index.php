@@ -802,6 +802,12 @@
                 <a href="#"><i class="fas fa-blog"></i></a>
             </div>
             <p class="copyright">&copy; 2026 Repon Sheikh. All Rights Reserved. Engineered with passion.</p>
+            <p class="last-updated" style="font-size: 0.75rem; opacity: 0.5; margin-top: 0.5rem;">
+                Last Updated: <?php 
+                    date_default_timezone_set("Asia/Dhaka");
+                    echo date("F d, Y H:i", filemtime(__FILE__)); 
+                ?>
+            </p>
         </div>
     </footer>
 
